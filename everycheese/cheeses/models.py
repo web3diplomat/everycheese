@@ -22,3 +22,6 @@ class Cheese(TimeStampedModel):
     slug = AutoSlugField("Cheese Address",
         unique=True, always_update=False, populate_from="name")
     description = models.TextField("Description", blank=True)
+
+    def __str__(self):
+        return self.name
