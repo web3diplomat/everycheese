@@ -28,3 +28,5 @@ class CheeseFactory(factory.django.DjangoModelFactory):
 
     class Meta:
         model = Cheese    
+
+    country_of_origin = factory.Faker('country_code')
